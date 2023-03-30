@@ -1,0 +1,179 @@
+@media screen  {
+    *{
+        margin: 0;
+        font-family: 'Cairo', sans-serif;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: #1478B0;
+            color: #F5F5F5;
+            width: 100%;
+            height: 100%;
+        
+        }
+       
+        #navbar{
+            display: block;
+            margin-top: 10px;
+        
+        }
+        #navbar-link{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin: 0;
+            padding: 0px 10px;
+        }
+        .link{
+            list-style: none;
+            margin: 0 1rem;
+            
+        }
+        a{
+            text-decoration: none;
+            border-radius: 25px;
+            padding: 0px 0.3rem;
+            color: #F5F5F5;
+        font-size: 3rem;
+        }
+        a:hover{
+            background-color: #5FC5FF;
+        }
+        a:checked{
+            background-color: aquamarine;
+        }
+        
+        /*                                   page                        */
+        #home,#home2{
+            display: flex;
+            flex-direction: row;
+            margin-top: 1rem;
+        }
+        #client{
+            border-right: 3px solid #F5F5F5;
+            width: 50rem;
+            padding: 0 1rem;
+            text-align: center;
+        }
+        
+        .clientInput{
+            height: 7rem;
+        width: 30rem;
+        border-radius: 30px;
+        text-align: center;
+        font-size: 4rem;
+        border: none;
+        border-style: none;
+        }
+        #currencyType{
+            margin-top:5rem;
+        }
+          input[type="radio"]{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin-right: 2rem;
+            margin-bottom: -10rem;
+            color: #1478B0;
+            text-align: center;
+            align-items: center;
+            display: inline-block;
+          }
+        #client p {
+            float: right;
+            font-size: 3rem;
+            margin-right: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        #btn-submit{
+            text-align: center;
+            width: 12rem;
+            height: 6rem;
+            margin: 2rem 0;
+            font-size: 3rem;
+            border-radius: 20px;
+            border: 1px solid #1478B0;
+            padding: 0 15px;
+        }
+        #btn-submit:hover{
+            background-color: #839dd1;
+            color: #F5F5F5;
+        }
+        
+        /*        ///////////////////////                  payType         //////////////////       */
+        #payType{
+            text-align: center;
+            width: 60%;
+            margin: 0 20px;
+            font-size: 2rem; 
+        }
+        #payType p {
+            width: 480px;
+        }
+        #sert p {
+            float: right;
+            font-size: 2rem;
+        }
+        #currencyValue ,#currencydollar,#currencyLeb{
+            margin: 0 20px ;
+            text-align: center;
+            width: 200px;
+        
+        }
+        #sert{
+            width: 480px;
+            
+        }
+        #timeContainer{
+            /*justify-content: flex-start;*/
+            margin-right: 10px;
+        }
+        #currencydollar{
+            text-align: center;
+        }
+        .hiddenPayType{
+            display: none;
+        }
+        input{
+           border: none;
+           transform: scale(1);
+            
+        }
+        .restvalue{
+            font-size: 1.5rem;
+       text-align: center;
+        }
+        /*                                   exchange-sarf                                 */
+       span{
+        font-size: 2rem;
+       }
+        #home2 p {
+            font-size: 2rem;
+    
+        }
+         .head {
+            font-size:4rem;
+            text-align: center;
+            width: 450px;
+        }
+        #currencyexchange,#currencyexchange2{
+            text-align: center;
+            padding: 0 1rem;
+        }
+       
+        #home2 {
+            margin:2rem auto;
+            padding: 4rem 5rem;
+            text-align: center;
+        }
+       #home2 p {
+        width: 480px;
+       }
+        #currencyexchange {
+            border-right:  3px solid #F5F5F5;
+        }
+        
+}
