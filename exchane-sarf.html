@@ -23,11 +23,11 @@
         <div id="currencyexchange">
             <h4 class="head">تحديد سعر الصرف</h4>
             <p> القيمة باللبناني</p>
-            <input type="number" id="lebValue" class="clientInput">
+            <input type="number" id="leb1Value" class="clientInput">
           <p>القيمة بالدولار</p>
-          <input type="number" id="dollarValue" class="clientInput">
+          <input type="number" id="dollar1Value" class="clientInput">
           <p>سعر الصرف</p>
-          <input type="number" id="sarfValue" class="clientInput">
+          <input type="number" id="sarf1Value" class="clientInput">
         </div>
           </div>
           <div id="currencyexchange2">
@@ -46,30 +46,6 @@
         </div>
           </div>
         </main>
-        <script>
-let lebValue = document.getElementById("lebValue")
-let sarfValue = document.getElementById("sarfValue")
-let dollarValue = document.getElementById("dollarValue")
-let dollar2Value = document.getElementById("dollar2Value")
-let leb2Value = document.getElementById("leb2Value")
-let sarfknow= document.getElementById("sarfknow")
-
-lebValue.onkeyup =  function knonw () {
-   sarfValue.value = Math.float(lebValue.value / dollarValue.value)
-}
-dollarValue.onkeyup =  function known () {
-  sarfValue.value = Math.float(lebValue.value / dollarValue.value)
-}
- 
-sarfknow.onkeyup =  function () {
-    lebValue.value = sarfknow.value * dollar2Value.value
-}
-dollar2Value.onkeyup =  function () {
-    leb2Value.value = sarfknow.value * dollarValue.value
-}
-leb2Value.onkeyup =  function () {
-    dollarValue.value = leb2Value.value / sarfknow.value
-}
-        </script>
+        <script src="currencyExchange.js"></script>
       </body>
       </html>

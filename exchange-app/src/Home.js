@@ -1,3 +1,4 @@
+function Home() {
 let clientName = document.getElementById("clientName1")
 let dollarPay =  document.getElementById("dollar")
 let liraPay = document.getElementById("lira")
@@ -10,16 +11,16 @@ let dollarPayValue = document.getElementById("dollarPayValue")
 let lebRest = document.getElementById("lebRest")
 let rest = document.getElementById("rest")
  let lebDollarvalue = document.getElementById("leb-dollarvalue")
-let paytypeLeb = document.getElementById("paytypeLeb") 
-currencyType = document.getElementsByName("currency")
+let currencyType = document.getElementsByName("currency")
 /////////////////////////////////lebpaid /////////////////////////
 let clientPaid = [];
-if(sessionStorage.sarfValue === 0 ) {
+if(sessionStorage.sarfValue === null ) {
  sessionStorage.setItem("sarfvalue", JSON.stringify(sarfValue.value))
 }
 if(sessionStorage.sarfValue != 0 ) {
 sarfValue.value = JSON.parse(sessionStorage.getItem("sarfValue"))
 }
+
 btnSubmit.onclick= function (){
     if(localStorage.dataMenu != 0) {
    let clientObj = {
@@ -70,23 +71,24 @@ sarfValue.onkeyup =  function exchange () {
     let total = lebRest.value / sarfValue.value
     rest.innerHTML = Math.abs(parseFloat(total.toFixed(2)))
 }
-liraPay.onclick = function () {
-    for(let i = 0 ; i < currencyType.length ; i++) {
-    if (currencyType[i].checked){
-       paytypeLeb.classList.remove("hiddenPayType")
-       paytypeDollar.classList.add("hiddenPayType")
-    }
-    }
-}
+
 dollarPay.onclick = function () {
     for(let i = 0 ; i < currencyType.length ; i++) {
     if (currencyType[i].checked){
-       paytypeLeb.classList.add("hiddenPayType")
-       paytypeDollar.classList.remove("hiddenPayType")
-
-    
-}
+        payType.classList.add("hiddenPayType")
+    }
     }
 }
+
+liraPay.onclick = function () {
+    for(let i = 0 ; i < currencyType.length ; i++) {
+    if (currencyType[i].checked){
+        payType.classList.remove("hiddenPayType")
+    }
+    }
+}
+}
+
+export default Home ;
 
 

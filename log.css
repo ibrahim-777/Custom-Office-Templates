@@ -1,3 +1,8 @@
 table{
-    margin: 20px;
+    margin: 4rem;
+    font-size: 2rem;
+}
+.tablehead{
+    padding: 20px;
+    background-color: #555;
 }
