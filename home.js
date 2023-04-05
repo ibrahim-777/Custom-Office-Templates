@@ -52,24 +52,14 @@ function updateClock() {
  function exchange () {
     lebRest.value = billValue.value - (dollarPayValue.value * sarfValue.value) 
     let total = lebRest.value / sarfValue.value
-    rest.innerHTML = Math.abs(parseFloat(total.toFixed(2)))
-}
-dollarPayValue.onkeyup =  function exchange () {
-    lebRest.value = billValue.value - (dollarPayValue.value * sarfValue.value) 
-    let total = lebRest.value / sarfValue.value
     lebDollarvalue.innerHTML =  dollarPayValue.value * sarfValue.value
     rest.innerHTML = Math.abs(parseFloat(total.toFixed(2)))
 }
-billValue.onkeyup =  function exchange () {
-    lebRest.value = billValue.value - (dollarPayValue.value * sarfValue.value) 
-    let total = lebRest.value / sarfValue.value
-    rest.innerHTML = Math.abs(parseFloat(total.toFixed(2)))
-}
-sarfValue.onkeyup =  function exchange () {
-    lebRest.value = billValue.value - (dollarPayValue.value * sarfValue.value) 
-    let total = lebRest.value / sarfValue.value
-    rest.innerHTML = Math.abs(parseFloat(total.toFixed(2)))
-}
+
+dollarPayValue.onkeyup =  exchange () 
+billValue.onkeydown =  exchange () 
+sarfValue.onkeyup =  exchange () 
+
 liraPay.onclick = function () {
     for(let i = 0 ; i < currencyType.length ; i++) {
     if (currencyType[i].checked){
@@ -78,13 +68,11 @@ liraPay.onclick = function () {
     }
     }
 }
-dollarPay.onclick = function () {
+dollarPay.onclick = function  () {
     for(let i = 0 ; i < currencyType.length ; i++) {
     if (currencyType[i].checked){
        paytypeLeb.classList.add("hiddenPayType")
        paytypeDollar.classList.remove("hiddenPayType")
-
-    
 }
     }
 }
