@@ -15,7 +15,7 @@ currencyType = document.getElementsByName("currency")
 /////////////////////////////////lebpaid /////////////////////////
 let clientPaid = [];
 
-btnSubmit.onclick= function (){
+btnSubmit.onclick = function (){
  
     if(localStorage.dataMenu != 0) {
    let clientObj = {
@@ -34,17 +34,7 @@ else{
     localStorage.setItem('dataMenu' , JSON.stringify(clientPaid)) 
     }   
 }
-let table = document.getElementById("table");
-
-table.innerHTML += `
-<tr>${clientPaid[i].clientObj.clientName}</tr>
-<tr>${clientPaid[i].clientObj.billValue}</tr>
-<tr>${clientPaid[i].clientObj.sarfValue}</tr>
-<tr>${clientPaid[i].clientObj.dollarPayValue}</tr>
-<tr>${clientPaid[i].clientObj.lebRest}</tr>
-`
   }
-  console.log(clientPaid)
 function updateClock() {
     var clock = document.getElementById("clock");
     var now = new Date();
