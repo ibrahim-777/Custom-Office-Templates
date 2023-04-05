@@ -1,8 +1,14 @@
 table{
-    margin: 4rem;
+    margin: 4rem auto;
     font-size: 2rem;
 }
 .tablehead{
-    padding: 20px;
-    background-color: #555;
+    padding: 20px 40px;
+    background-color: #1451ac;
+    border-radius: 25px;
+}
+table{
+    justify-content: space-between;
+    gap: 20px;
+
 }

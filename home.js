@@ -14,13 +14,9 @@ let paytypeLeb = document.getElementById("paytypeLeb")
 currencyType = document.getElementsByName("currency")
 /////////////////////////////////lebpaid /////////////////////////
 let clientPaid = [];
-if(sessionStorage.sarfValue === 0 ) {
- sessionStorage.setItem("sarfvalue", JSON.stringify(sarfValue.value))
-}
-if(sessionStorage.sarfValue != 0 ) {
-sarfValue.value = JSON.parse(sessionStorage.getItem("sarfValue"))
-}
+
 btnSubmit.onclick= function (){
+ 
     if(localStorage.dataMenu != 0) {
    let clientObj = {
    clientName : clientName.value,
@@ -34,10 +30,21 @@ clientPaid.push(clientObj)
 localStorage.setItem('dataMenu' , JSON.stringify(clientPaid));
 }
 else{
-    localStorage.setItem('dataMenu' , JSON.stringify(clientPaid))    
+    for(let i = 0 ;i < clientPaid.length ; i++){
+    localStorage.setItem('dataMenu' , JSON.stringify(clientPaid)) 
+    }   
 }
+let table = document.getElementById("table");
 
-}
+table.innerHTML += `
+<tr>${clientPaid[i].clientObj.clientName}</tr>
+<tr>${clientPaid[i].clientObj.billValue}</tr>
+<tr>${clientPaid[i].clientObj.sarfValue}</tr>
+<tr>${clientPaid[i].clientObj.dollarPayValue}</tr>
+<tr>${clientPaid[i].clientObj.lebRest}</tr>
+`
+  }
+  console.log(clientPaid)
 function updateClock() {
     var clock = document.getElementById("clock");
     var now = new Date();

@@ -18,7 +18,7 @@ let sarf21Value = document.getElementById("sarf21Value")
     setInterval(updateClock, 1000);
 
     function exchange2 () {
-        DollarTypelebRest.value = (bill22.value -dollarPayValue.value) * sarf21Value.value
+        DollarTypelebRest.value = Math.floor((bill22.value -dollarPayValue.value) * sarf21Value.value)
         let total2 = DollarTypelebRest.value / sarf21Value.value
         restDollar.innerHTML = Math.abs(parseFloat(total2.toFixed(2)))
         leb2value.innerHTML =  dollarPayValue.value * sarf21Value.value
