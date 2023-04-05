@@ -23,6 +23,6 @@ let sarf21Value = document.getElementById("sarf21Value")
         restDollar.innerHTML = Math.abs(parseFloat(total2.toFixed(2)))
         leb2value.innerHTML =  dollarPayValue.value * sarf21Value.value
     }
-    sarf21Value.onkeyup = exchange2 ();
-    dollarPayValue.onkeyup = exchange2();
-    bill22.onkeyup = exchange2();
+    sarf21Value.onkeyup = function (){exchange2 ()};
+    dollarPayValue.onkeyup = function (){exchange2 ()};
+    bill22.onkeyup = function (){exchange2 ()};
