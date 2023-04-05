@@ -49,6 +49,7 @@ function updateClock() {
   }
   // Update clock every second
   setInterval(updateClock, 1000);
+
  function exchange () {
     lebRest.value = billValue.value - (dollarPayValue.value * sarfValue.value) 
     let total = lebRest.value / sarfValue.value
@@ -56,25 +57,14 @@ function updateClock() {
     rest.innerHTML = Math.abs(parseFloat(total.toFixed(2)))
 }
 
-dollarPayValue.onkeyup =  exchange () 
-billValue.onkeydown =  exchange () 
-sarfValue.onkeyup =  exchange () 
-
-liraPay.onclick = function () {
-    for(let i = 0 ; i < currencyType.length ; i++) {
-    if (currencyType[i].checked){
-       paytypeLeb.classList.remove("hiddenPayType")
-       paytypeDollar.classList.add("hiddenPayType")
-    }
-    }
+dollarPayValue.onkeyup =  function() {
+    exchange ()
 }
-dollarPay.onclick = function  () {
-    for(let i = 0 ; i < currencyType.length ; i++) {
-    if (currencyType[i].checked){
-       paytypeLeb.classList.add("hiddenPayType")
-       paytypeDollar.classList.remove("hiddenPayType")
-}
-    }
-}
+billValue.onkeyup =   function() {
+    exchange ()
+} ;
+sarfValue.onkeyup =  function() {
+    exchange ()
+} ;
 
 
