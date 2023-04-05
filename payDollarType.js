@@ -1,6 +1,6 @@
 let paytypeDollar = document.getElementById("paytypeDollar")
 let sarf21Value = document.getElementById("sarf21Value")
-  let lebvalue = document.getElementById("leb-value")
+  let leb2value = document.getElementById("leb2-value")
   let DollarTypelebRest = document.getElementById("DollarType-lebRest")
   let restDollar = document.getElementById("restDollar")
   let bill2Value = document.getElementById("bill22")
@@ -21,8 +21,8 @@ let sarf21Value = document.getElementById("sarf21Value")
         DollarTypelebRest.value = (bill22.value -dollarPayValue.value) * sarf21Value.value
         let total2 = DollarTypelebRest.value / sarf21Value.value
         restDollar.innerHTML = Math.abs(parseFloat(total2.toFixed(2)))
-        lebvalue.innerHTML =  dollarPayValue.value * sarf21Value.value
+        leb2value.innerHTML =  dollarPayValue.value * sarf21Value.value
     }
     sarf21Value.onkeyup = exchange2 ();
     dollarPayValue.onkeyup = exchange2();
-    billValue.onkeyup = exchange2();
+    bill22.onkeyup = exchange2();
