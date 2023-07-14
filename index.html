@@ -1,38 +1,78 @@
 <!DOCTYPE html>
-<html lang="en-us" >
-    <head>
-       
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name ="viewport" >
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css" >
-    </head>
-    <body>
-        
-        <h1 class="nv menu">القائمة الأساسية</h1>
-                <h1 class="nv 1"><a href="sayrafa-value.html">حساب سعر الصرف</a></h1>
-                <h1 class="nv 2"><a href="dolarrest.html">حساب الباقي</a></h1>
-                <h1 class="nv 3"><a href="sayrafa.html">تصريف دولار</a></h1>
-                <h1 class="nv 4"> <a href="calculator.html">آلة حاسبة</a></h1>
-        
-        <style>
-            .nv{
-                height: 100px;
-                width: 400px;
-                background-color: brown;
-                font-size: 2rem;
-                border-radius: 7px;
-                border: solid none 3px;
-                display: flex;
-                margin: 30px auto;
-            }
-           .menu{
-            text-align:center;
-            }
-        </style>
-        <script>
-            let nav1 = document.getElementsByClassName('nv 1')
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="exchange.css">
+</head>
+<body>
+  <nav id="navbar">
+    <ul id="navbar-link">
+    <li class="link"><a href="index.html">مبيعات</a></li>
+    <li class="link"><a href="exchane-sarf.html">تبديل عملات</a></li>
+    <li class="link"><a href="log.html">السجل</a></li>
+    <li class="link"><a href="dollarPay.html">قسم الدولار</a></li>
+    </ul>
+  </nav>
+  <main id="home">
+    <div id="client">
+      <div id="clientName"><p>إسم الزبون</p> 
+        <input type="text" id ="clientName1" class="clientInput"></div>
+      <div id="currencyType">
+        <label for="dollar">$<input type="radio" name="currency" class="crn" value="dollar" id="dollar"></label>
+        <label for="lira">L.L<input type="radio" name="currency" class="crn" value="lira" id="lira" checked ></label>
+        <p>قيمة الفاتورة</p>
+        <input type="number" id="bill" class="clientInput"  >
+      </div>
+      <button id="btn-submit" type="submit">حفظ</button>
+    </div>
 
-        </script>
-        
+    <div id="payType">
+    <div id="paytypeLeb">
+      <div id="currencyValue">
+        <div id="sert">
+    <p id="timeContainer">Time: <span id="time">00:00</span></p>
+    <p>سعر الصرف</p>
+  </div>
+    <input type="number" id="sarfValue" class="clientInput"  placeholder = "110000">
+  </div>
+  <div id="currencydollar">
+    <p>الدفع بالدولار</p>
+    <input type="number" id="dollarPayValue" class="clientInput">
+    <p class="restvalue">ما يعادل باللبناني  <span id="leb-dollarvalue">0.00</span></p>
+  </div>
+  <div id="currencyLeb">
+    <p>الباقي باللبناني</p>
+    <input type="number" id="lebRest" class="clientInput" >
+    <p class="restvalue">ما يعادل بالدولار  <span id="rest">0.00</span></p>
+  </div>
+  </div>
+  <div id="paytypeDollar" class="hiddenPayType">
+    <div id="currencyValue">
+      <div id="sert">
+      <p id="timeContainer">Time: <span id="time">00:00</span></p>
+  <p>سعر الصرف</p>
+</div>
+  <input type="number" id="sarf21Value" class="clientInput"  placeholder = "110000">
+</div>
+<div id="currencydollar">
+  <p>الدفع بالدولار</p>
+  <input type="number" id="dollarPayValue" class="clientInput">
+  <p class="restvalue">ما يعادل باللبناني  <span id="leb-value">0.00</span></p>
+</div>
+<div id="currencyLeb">
+  <p>الباقي باللبناني</p>
+  <input type="number" id="DollarType-lebRest" class="clientInput" >
+  <p class="restvalue"> يعادل بالدولار<span id="restDollar">0.00</span></p>
+</div>
+  </div>
+</div>
+  </main>
+  <script src="home.js"></script>
+</body>
 </html>
